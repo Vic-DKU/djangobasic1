@@ -1,0 +1,23 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
+  <h1>Pets</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Count</th>
+        <th>Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pet in pet_list %}
+        <tr>
+          <td>{{ pet.name }}</td>
+          <td>{{ pet.count }}</td>
+          <td>{{ pet.owner }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
